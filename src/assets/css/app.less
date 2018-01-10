@@ -1,0 +1,46 @@
+@import './antui-all.css';
+@baseBlue: #0096ff;
+@com_gray1: #666;
+@com_gray2: #999;
+
+.main{
+  width: 100%;
+  overflow: hidden;
+  font-size: .15rem;
+  .main-header{
+    background-color: @baseBlue;
+    padding: 5px 15px;
+    .main-location{
+      color: #fff;
+    }
+    .main-search input{
+      width: 100%;
+      height: .38rem;
+      text-align: center;
+      margin: .1rem 0;
+      border: none;
+      border-radius: 20px;
+    }
+    .main-hotword{
+      height: .2rem;
+      overflow-x: scroll;
+      overflow-y: hidden ;
+      white-space: normal;
+      div{
+        width: 1000px;
+      }
+      span {
+        margin-right: 5px;
+        float: left;
+      }
+    }
+    .main-banner{
+      width: 100%;
+      .banner-img{
+        width: 33%;
+        float: left;
+      }
+    }
+  }
+}
+
