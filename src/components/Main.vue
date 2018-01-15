@@ -4,7 +4,7 @@
     <div class="main-header">
       <div class="main-location">
         <div class="fn-left">深圳市福田区华强北</div>
-        <div class="fn-right">登录</div>
+        <div class="fn-right" @click="login" v-if="!isLogin">登录</div>
       </div>
       <!--搜索-->
       <div class="main-search">
@@ -74,7 +74,7 @@
     <div class="main-list">
       <h3>推荐商家</h3>
       <div>
-        <OneBusiness v-for="item in falseBussinessbrief" :val="item"></OneBusiness>
+        <OneBusiness v-for="item,index in falseBussinessbrief" :val="item" :key="index"></OneBusiness>
       </div>
     </div>
   <!-- 底部导航 -->
@@ -105,6 +105,13 @@ export default {
       'falseHotWord',
       'falseBussinessbrief'
     ])
+  },
+  methods: {
+    login() {
+      if (!this.isLogin) {
+        this.$router.replace('/Login')
+      }
+    }
   }
 }
 

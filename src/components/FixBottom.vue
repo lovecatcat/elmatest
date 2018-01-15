@@ -1,13 +1,18 @@
 <template>
   <section class="FixBottom am-fixed am-fixed-bottom">
    <div>
-    <svg v-if="returnPageNow == 'homepage'">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#index.18edf5a"></use>
-    </svg>
-    首页
+     <router-link to="/">
+       首页
+     </router-link>
   </div>
-   <div>订单</div>
-   <div>我的</div>
+   <div>
+     <router-link to="OrderList">
+       订单
+     </router-link>
+   </div>
+   <div>
+     <router-link to="MyCenter">我的</router-link>
+   </div>
   </section>
 </template>
 <script>
